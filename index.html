@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cute Pastel Navbar</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mitr:wght@500;600&family=Baloo+2:wght@600&family=Sarabun:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav__inner">
+
+    <a href="#" class="nav__logo">
+      <span class="nav__logo-blob">☁️</span>
+      ป๊อปปี้<span class="nav__logo-dot">•</span>ช็อป
+    </a>
+
+    <button class="nav__burger" id="burger" aria-label="เปิดเมนู" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <ul class="nav__list" id="navList">
+      <li><a href="#" class="nav__item is-active"><span class="nav__emoji">🏠</span>หน้าแรก</a></li>
+      <li><a href="#" class="nav__item"><span class="nav__emoji">🎀</span>สินค้า</a></li>
+      <li><a href="#" class="nav__item"><span class="nav__emoji">✨</span>รีวิว</a></li>
+      <li><a href="#" class="nav__item"><span class="nav__emoji">🌈</span>เกี่ยวกับเรา</a></li>
+    </ul>
+
+    <a href="mailto:hello@poppy.shop" class="nav__contact" aria-label="ติดต่อเรา" title="ติดต่อเรา">
+      <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+      </svg>
+      <span class="nav__contact-ping"></span>
+    </a>
+
+  </div>
+</nav>
+
+<script>
+  const burger = document.getElementById('burger');
+  const list = document.getElementById('navList');
+  burger.addEventListener('click', () => {
+    const open = list.classList.toggle('is-open');
+    burger.classList.toggle('is-open');
+    burger.setAttribute('aria-expanded', open);
+  });
+</script>
+
+</body>
+</html>
